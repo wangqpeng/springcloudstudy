@@ -7,12 +7,28 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_cloud_api" />
+        <module name="spring_cloud_consumer_dept80" />
+        <module name="spring_cloud_consumer_dept_feign" />
+        <module name="spring_cloud_eureka7001" />
+        <module name="spring_cloud_eureka7002" />
+        <module name="spring_cloud_eureka7003" />
         <module name="spring_cloud_provider_dept8001" />
+        <module name="spring_cloud_provider_dept8002" />
+        <module name="spring_cloud_provider_dept8003" />
+        <module name="spring_cloud_provider_hystrix_8001" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="spring_cloud_api" target="1.8" />
+      <module name="spring_cloud_consumer_dept80" target="1.8" />
+      <module name="spring_cloud_consumer_dept_feign" target="1.8" />
+      <module name="spring_cloud_eureka7001" target="1.8" />
+      <module name="spring_cloud_eureka7002" target="1.8" />
+      <module name="spring_cloud_eureka7003" target="1.8" />
       <module name="spring_cloud_provider_dept8001" target="1.8" />
+      <module name="spring_cloud_provider_dept8002" target="1.8" />
+      <module name="spring_cloud_provider_dept8003" target="1.8" />
+      <module name="spring_cloud_provider_hystrix_8001" target="1.8" />
       <module name="springcloudStudy" target="1.8" />
     </bytecodeTargetLevel>
   </component>

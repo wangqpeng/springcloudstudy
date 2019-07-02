@@ -3,7 +3,6 @@ server:
   port: 8001
   #context-path: /study 配置根目录
 
-
 #数据库信息配置
 spring:
   application:
@@ -36,7 +35,22 @@ spring:
 #Mybatis配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml        #mybatis配置文件所在路径
-  type-aliases-package: com.gxs.springcloud.entities  #所有entity别名类所在的包
+  type-aliases-package: com.spring.cloud.entity  #所有entity别名类所在的包
   configuration:
     map-underscore-to-camel-case: true #开启驼峰命名
-    cache-enabled: true #开启二级缓存
+    cache-enabled: true  #开启二级缓存
+
+#向eureka中心提交注册
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:7001/eureka
+  instance:
+      instance-id: study-springcloud-dept #应用名称 将注册中心服务名称起别名
+      prefer-ip-address: true  #显示ip地址
+
+info:
+  app.name: study-springcloud-micoservices
+  company.name: www.baidu.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

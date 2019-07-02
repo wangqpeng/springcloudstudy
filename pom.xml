@@ -10,6 +10,14 @@
     <modules>
         <module>spring_cloud_api</module>
         <module>spring_cloud_provider_dept8001</module>
+        <module>spring_cloud_consumer_dept80</module>
+        <module>spring_cloud_eureka7001</module>
+        <module>spring_cloud_eureka7002</module>
+        <module>spring_cloud_eureka7003</module>
+        <module>spring_cloud_provider_dept8002</module>
+        <module>spring_cloud_provider_dept8003</module>
+        <module>spring_cloud_consumer_dept_feign</module>
+        <module>spring_cloud_provider_hystrix_8001</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -78,4 +86,30 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <!--finalName 父工程名称-->
+        <finalName>spring-cloud-study</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!--过滤开启-->
+                <filtering>true</filtering>
+            </resource>
+
+        </resources>
+        <!--增加插件-->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <!--配置插件解析-->
+                <configuration>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
