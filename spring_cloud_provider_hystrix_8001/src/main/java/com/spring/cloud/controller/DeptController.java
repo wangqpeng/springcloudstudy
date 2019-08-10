@@ -32,10 +32,5 @@ public class DeptController {
         return  deptEntity;
     }
 
-    public Dept processHystrixGet( Long deptNo){
-        return  new Dept().setDeptNo(deptNo)
-                .setDeptName("该deptNo没有对应的信息")
-                .setDbSource("没有这个数据库");
-    }
-
+    
 }
